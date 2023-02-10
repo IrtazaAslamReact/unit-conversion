@@ -3,7 +3,8 @@ for client
 cd client 
 ng serve 
 
-go to url/conversion
+
+go to http://localhost:4200/conversion
 
 
 
