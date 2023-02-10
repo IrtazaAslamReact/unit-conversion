@@ -1,0 +1,54 @@
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <label>Value:</label>
+    <input type="number" [(ngModel)]="value" name="value" required />
+  </div>
+  <div>
+    <label>From Unit:</label>
+    <select
+      [ngModel]="fromUnit"
+      (ngModelChange)="fromUnit = $event"
+      name="fromUnit"
+      required
+    >
+      <option value="Celsius">Celsius</option>
+      <option value="Fahrenheit">Fahrenheit</option>
+      <option value="Kelvin">Kelvin</option>
+      <option value="Rankine">Rankine</option>
+      <option value="liters">Liters</option>
+      <option value="tablespoons">Tablespoons</option>
+      <option value="cubicInches">Cubic Inches</option>
+      <option value="cups">Cups</option>
+      <option value="cubicFeet">Cubic Feet</option>
+      <option value="gallons">Gallons</option>
+    </select>
+  </div>
+  <div>
+    <label>To Unit:</label>
+    <select
+      [ngModel]="toUnit"
+      (ngModelChange)="toUnit = $event"
+      name="toUnit"
+      required
+    >
+      <option value="Celsius">Celsius</option>
+      <option value="Fahrenheit">Fahrenheit</option>
+      <option value="Kelvin">Kelvin</option>
+      <option value="Rankine">Rankine</option>
+      <option value="liters">Liters</option>
+      <option value="tablespoons">Tablespoons</option>
+      <option value="cubicInches">Cubic Inches</option>
+      <option value="cups">Cups</option>
+      <option value="cubicFeet">Cubic Feet</option>
+      <option value="gallons">Gallons</option>
+    </select>
+  </div>
+  <button type="submit">Convert</button>
+  <br /><br />
+  <div *ngIf="studentResponse">
+    <p><strong>Response:</strong> {{ studentResponse }}</p>
+  </div>
+</form>
+<div *ngIf="output" class="output">
+    <p>Result: {{ output }}</p>
+</div>
